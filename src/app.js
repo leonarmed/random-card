@@ -5,7 +5,36 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
+function random(max) {
+  return Math.floor(Math.random() * (max + 1));
+}
+
 window.onload = function() {
   //write your code here
-  console.log("Hello Rigo from the console!");
+  let pinta = random(3);
+  let card = random(12);
+  let symbol = ["♦", "♥", "♠", "♣"];
+  console.log("symbol", symbol[pinta], "pinta", pinta, "card", card);
+
+  const up = document.querySelector(".up");
+  const number = document.querySelector(".number");
+  const down = document.querySelector(".down");
+
+  if (pinta === 0 || pinta === 1) {
+    up.className += " red";
+    down.className += " red";
+  }
+
+  switch (card) {
+    case 1:
+      card = "A";
+    case 11:
+      card = "Q";
+    case 12:
+      card = "K";
+  }
+
+  up.textContent = symbol[pinta];
+  number.textContent = card;
+  down.textContent = symbol[pinta];
 };
