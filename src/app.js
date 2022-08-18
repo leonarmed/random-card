@@ -26,12 +26,15 @@ window.onload = function() {
   }
 
   switch (card) {
-    case 1:
+    case 0:
       card = "A";
+      break;
     case 11:
       card = "Q";
+      break;
     case 12:
       card = "K";
+      break;
   }
 
   up.textContent = symbol[pinta];
