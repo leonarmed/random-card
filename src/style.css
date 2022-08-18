@@ -1,1 +1,27 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+}
+
+.card {
+  width: 250px;
+  height: 380px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 55px;
+}
+
+.red {
+  color: red;
+}
+
+.card .up {
+  text-align: left;
+}
+
+.card .down {
+  text-align: left;
+  transform: rotate(180deg);
+}
